@@ -1,0 +1,15 @@
+#-----------------------------------------------------------------------
+# .gitconfig
+#-----------------------------------------------------------------------
+[alias]
+	ad  = add .
+	ada = add . # 全てをインデックスに追加(add all)
+	cm  = commit
+	cmm = commit -m # コメント付きコミット
+	cob = checkout -b
+	lg  = log --graph --oneline --decorate
+	ll  = log --stat
+	ls  = !ls --color=auto --show-control-chars
+	rl  = remote -v
+	st  = status
+
