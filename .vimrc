@@ -12,12 +12,21 @@
 "---------------------------------------------------------------------------
 " ファイル編集に関する設定:
 "
+" 日本語設定
+" エンコードの設定(ファイルを開くエンコード)
+":set encoding=sjis
+" ファイルエンコードの設定(入力形式)
+":set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+" ファイルフォーマットの設定(改行形式)
+":set fileformat=dos
+
 " 折り畳みマーカーを設定する
 " 折り畳みマーカーをコメントでつける <ヴィジュアルモードで選択範囲を fz >
 " 参考: http://nanasi.jp/articles/howto/fold/fold-marker.html
 :set foldmethod=marker
 
 " markdown
+" md as markdown, instead of modula2
 autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 
 " インクルードディレクトリを設定
@@ -88,21 +97,48 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" 以下は必要に応じて追加
+" 
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neocomplcache.vim'
+
 " neocomplete.vim
 " 汎用的な補完を行う
 NeoBundle 'Shougo/neocomplete.vim'
+" 補完を有効にする
+let g:neocomplete#enable_at_startup = 1
+" 補完に時間がかかってもスキップしない
+let g:neocomplete#skip_auto_completion_time = ""
+
+" surround.vim
+NeoBundle 'tpope/vim-surround'
+
+" Emmet-vim
+NeoBundle 'mattn/emmet-vim'
+" lang="ja" にする
+let g:user_emmet_settings = { 
+\ 'variables': { 
+\ 'lang' : 'ja' 
+\ } 
+\} 
+
+" open-browser.vim
+NeoBundle 'tyru/open-browser.vim'
+command! OpenBrowserCurrent execute "OpenBrowser" expand("%:p")
+
+" mattn/emmet-vim
+NeoBundle 'thinca/vim-quickrun'
+"let g:quickrun_config['html'] = { 'command' : 'open', 'exec' : '%c %s', 'outputter': 'browser' }
+"let g:quickrun_config = { "html" : { 'exec' : 'start cmd /c %s', 'output': '!', 'shellcmd': '!%s' } }
+let g:quickrun_config = { "html" : { 'command' : 'open', 'exec' : 'start cmd /c %s', 'outputter': 'browser' } }
+
+" a.vim
+NeoBundle 'vim-scripts/a.vim'
+
+" DoxygenToolkit.vim
+NeoBundle 'mrtazz/DoxygenToolkit.vim'
 
 NeoBundle 'Shougo/neosnippet.vim'
 
-
-" 補完を有効にする
-let g:neocomplete#enable_at_startup = 1
-
-" 補完に時間がかかってもスキップしない
-let g:neocomplete#skip_auto_completion_time = ""
 
 " End of NeoBundle
 call neobundle#end()
@@ -114,13 +150,6 @@ filetype plugin indent on
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 NeoBundleCheck
-
-"--------------------------------------------------------------------------- 
-" タブに関する設定:
-"
-" plugin
-source ~/.vim/plugin/a.vim
-source ~/.vim/plugin/DoxygenToolkit.vim
 
 "---------------------------------------------------------------------------
 " キーマッピング(エイリアス):
