@@ -109,6 +109,9 @@ let g:neocomplete#enable_at_startup = 1
 " 補完に時間がかかってもスキップしない
 let g:neocomplete#skip_auto_completion_time = ""
 
+" neosnippet.vim
+NeoBundle 'Shougo/neosnippet.vim'
+
 " surround.vim
 NeoBundle 'tpope/vim-surround'
 
@@ -137,8 +140,8 @@ NeoBundle 'vim-scripts/a.vim'
 " DoxygenToolkit.vim
 NeoBundle 'mrtazz/DoxygenToolkit.vim'
 
-NeoBundle 'Shougo/neosnippet.vim'
-
+" commentout.vim
+NeoBundle 'sakuraiyuta/commentout.vim' 
 
 " End of NeoBundle
 call neobundle#end()
