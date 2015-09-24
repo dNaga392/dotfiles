@@ -134,6 +134,9 @@ NeoBundle 'thinca/vim-quickrun'
 "let g:quickrun_config = { "html" : { 'exec' : 'start cmd /c %s', 'output': '!', 'shellcmd': '!%s' } }
 let g:quickrun_config = { "html" : { 'command' : 'open', 'exec' : 'start cmd /c %s', 'outputter': 'browser' } }
 
+" clever-f.vim
+NeoBundle 'rhysd/clever-f.vim'
+
 " a.vim
 NeoBundle 'vim-scripts/a.vim'
 
@@ -141,7 +144,12 @@ NeoBundle 'vim-scripts/a.vim'
 NeoBundle 'mrtazz/DoxygenToolkit.vim'
 
 " commentout.vim
+" コメントアウトプラグイン
 NeoBundle 'sakuraiyuta/commentout.vim' 
+
+" maketable.vim
+" マークダウン風テーブル作成プラグイン
+NeoBundle 'mattn/vim-maketable'
 
 " End of NeoBundle
 call neobundle#end()
