@@ -6,6 +6,7 @@
 	ada = add . # 全てをインデックスに追加(add all)
 	cm  = commit
 	cmm = commit -m # コメント付きコミット
+	co  = checkout
 	cob = checkout -b
 	lg  = log --graph --oneline --decorate
 	ll  = log --stat
