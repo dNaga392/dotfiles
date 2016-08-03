@@ -128,7 +128,7 @@ let g:user_emmet_settings = {
 NeoBundle 'tyru/open-browser.vim'
 command! OpenBrowserCurrent execute "OpenBrowser" expand("%:p")
 
-" mattn/emmet-vim
+" vim-quickrun
 NeoBundle 'thinca/vim-quickrun'
 "let g:quickrun_config['html'] = { 'command' : 'open', 'exec' : '%c %s', 'outputter': 'browser' }
 "let g:quickrun_config = { "html" : { 'exec' : 'start cmd /c %s', 'output': '!', 'shellcmd': '!%s' } }
