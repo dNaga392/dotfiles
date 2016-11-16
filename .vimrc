@@ -151,6 +151,14 @@ NeoBundle 'sakuraiyuta/commentout.vim'
 " マークダウン風テーブル作成プラグイン
 NeoBundle 'mattn/vim-maketable'
 
+" vimfiler.vim
+" shell
+NeoBundle 'Shougo/vimshell.vim'
+
+" vimfiler.vim
+" ファイルエクスプローラ
+NeoBundle 'Shougo/vimfiler.vim'
+
 " End of NeoBundle
 call neobundle#end()
 
