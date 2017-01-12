@@ -50,3 +50,13 @@ source ~/dotfiles/.vimrc
 source ~/dotfiles/.vimrc
 ```
 
+3. Install as followes:
+
+* git (for NeoBuldle)
+* flake8 (for Sytastic to check python)
+* mypy-lang (for Sytastic to check python)
+
+4. Make directory as followes:
+
+* ~/.vim (for NeoBuldle)
+
