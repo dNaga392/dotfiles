@@ -159,6 +159,8 @@ NeoBundle 'Shougo/vimshell.vim'
 " ファイルエクスプローラ
 NeoBundle 'Shougo/vimfiler.vim'
 
+NeoBundle "scrooloose/syntastic"
+
 " End of NeoBundle
 call neobundle#end()
 
@@ -176,4 +178,4 @@ NeoBundleCheck
 "nnoremap  <DOWN> <C-w>j
 "nnoremap  <Right> <C-w>l
 "nnoremap  <Left> <C-w>h
-
+let g:syntastic_python_checkers = ["flake8", "mypy"]
