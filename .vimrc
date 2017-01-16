@@ -161,6 +161,8 @@ NeoBundle 'Shougo/vimfiler.vim'
 
 NeoBundle "scrooloose/syntastic"
 
+NeoBundle 'davidhalter/jedi-vim'
+
 " End of NeoBundle
 call neobundle#end()
 
@@ -173,9 +175,22 @@ filetype plugin indent on
 NeoBundleCheck
 
 "---------------------------------------------------------------------------
-" キーマッピング(エイリアス):
-"nnoremap  <UP> <C-w>k
-"nnoremap  <DOWN> <C-w>j
-"nnoremap  <Right> <C-w>l
-"nnoremap  <Left> <C-w>h
+" jedi settings:
+" 
+autocmd FileType python setlocal omnifunc=jedi#completions
+
+let g:jedi#auto_vim_configuration = 0
+
+if !exists('g:neocomplete#force_omni_input_patterns')
+        let g:neocomplete#force_omni_input_patterns = {}
+endif
+
+let g:neocomplete#force_omni_input_patterns.python = '\h\w*\|[^. \t]\.\w*'
+
+" docstringは表示しない
+autocmd FileType python setlocal completeopt-=preview
+"---------------------------------------------------------------------------
+" syntastic settings:
+" 
 let g:syntastic_python_checkers = ["flake8", "mypy"]
+
