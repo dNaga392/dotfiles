@@ -192,8 +192,7 @@ autocmd FileType python setlocal completeopt-=preview
 "---------------------------------------------------------------------------
 " syntastic settings:
 " 
-let g:syntastic_cpp_checkers = ["gcc"]
-let g:syntastic_cpp_include_dirs = ["C:\Qt\4.7.4\include"]
+let g:syntastic_cpp_checkers = ["cppcheck"]
 
 let g:syntastic_python_checkers = ["flake8", "mypy"]
 
