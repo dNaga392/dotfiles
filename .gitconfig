@@ -7,6 +7,7 @@
 	ada = add . # 全てをインデックスに追加(add all)
 	cm  = commit
 	cmm = commit -m # コメント付きコミット
+	cminit = commit --allow-empty -m \":seedling: first commit\" # 初回用コミットコマンド。打ち間違い防止のため長め
 	co  = checkout
 	cob = checkout -b
 	lg  = log --graph --oneline --decorate
