@@ -161,7 +161,8 @@ NeoBundle 'Shougo/vimfiler.vim'
 
 NeoBundle "scrooloose/syntastic"
 
-NeoBundle 'davidhalter/jedi-vim'
+"jedi を入れるとpythonファイル読み込み時に落ちるので一旦切る
+"NeoBundle 'davidhalter/jedi-vim'
 
 " End of NeoBundle
 call neobundle#end()
@@ -174,25 +175,26 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
-"---------------------------------------------------------------------------
-" jedi settings:
-" 
-autocmd FileType python setlocal omnifunc=jedi#completions
-
-let g:jedi#auto_vim_configuration = 0
-
-if !exists('g:neocomplete#force_omni_input_patterns')
-        let g:neocomplete#force_omni_input_patterns = {}
-endif
-
-let g:neocomplete#force_omni_input_patterns.python = '\h\w*\|[^. \t]\.\w*'
-
-" docstringは表示しない
-autocmd FileType python setlocal completeopt-=preview
+""---------------------------------------------------------------------------
+"" jedi settings:
+"" 
+"autocmd FileType python setlocal omnifunc=jedi#completions
+"
+"let g:jedi#auto_vim_configuration = 0
+"
+"if !exists('g:neocomplete#force_omni_input_patterns')
+"        let g:neocomplete#force_omni_input_patterns = {}
+"endif
+"
+"let g:neocomplete#force_omni_input_patterns.python = '\h\w*\|[^. \t]\.\w*'
+"
+"" docstringは表示しない
+"autocmd FileType python setlocal completeopt-=preview
 "---------------------------------------------------------------------------
 " syntastic settings:
 " 
+" 使用するには、PATHを通しておく
 let g:syntastic_cpp_checkers = ["cppcheck"]
-
+" 使用するには、pip install しておく
 let g:syntastic_python_checkers = ["flake8", "mypy"]
 
