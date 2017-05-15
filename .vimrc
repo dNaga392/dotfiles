@@ -14,11 +14,11 @@
 "
 " 日本語設定
 " エンコードの設定(ファイルを開くエンコード)
-":set encoding=sjis
+:set encoding=utf-8
 " ファイルエンコードの設定(入力形式)
-":set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+:set fileencodings=utf-8,sjis,iso-2022-jp,euc-jp
 " ファイルフォーマットの設定(改行形式)
-":set fileformat=dos
+:set fileformats=unix,dos,mac
 
 " 折り畳みマーカーを設定する
 " 折り畳みマーカーをコメントでつける <ヴィジュアルモードで選択範囲を fz >
