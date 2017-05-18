@@ -15,3 +15,8 @@
 	ls  = !ls --color=auto --show-control-chars
 	rl  = remote -v
 	st  = status
+[core]
+	ignorecase = false
+	autocrlf = input
+[fetch]
+	prune = true
