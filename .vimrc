@@ -198,3 +198,7 @@ let g:syntastic_cpp_checkers = ["cppcheck"]
 " égópÇ∑ÇÈÇ…ÇÕÅApip install ÇµÇƒÇ®Ç≠
 let g:syntastic_python_checkers = ["flake8", "mypy"]
 
+"---------------------------------------------------------------------------
+" vimfiler settings:
+
+noremap <C-X><C-D> :VimFiler -split -simple -winwidth=45 -no-quit<ENTER>
