@@ -202,3 +202,13 @@ let g:syntastic_python_checkers = ["flake8", "mypy"]
 " vimfiler settings:
 
 noremap <C-X><C-D> :VimFiler -split -simple -winwidth=45 -no-quit<ENTER>
+
+"---------------------------------------------------------------------------
+" quickrun settings:
+" 
+let g:quickrun_config = {
+\   "_" : {
+\       "runner" : "vimproc",
+\       "runner/vimproc/updatetime" : 60
+\   },
+\}
