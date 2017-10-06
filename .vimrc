@@ -1,6 +1,6 @@
 "===========================================================================
 " Vim個人用設定
-" 
+"
 
 "---------------------------------------------------------------------------
 " ウインドウに関する設定:
@@ -63,7 +63,7 @@ augroup END
 " tabnew
 command Tn tabnew
 
-"--------------------------------------------------------------------------- 
+"---------------------------------------------------------------------------
 " タブに関する設定:
 "
 " 半角スペース4文字に設定
@@ -71,6 +71,9 @@ command Tn tabnew
 :set tabstop=4
 :set shiftwidth=4
 :set softtabstop=0
+
+autocmd FileType c setlocal expandtab shiftwidth=4 softtabstop=0
+autocmd FileType cpp setlocal expandtab shiftwidth=4 softtabstop=0
 
 "---------------------------------------------------------------------------
 " NeoBundleを設定:
@@ -81,12 +84,12 @@ if !1 | finish | endif
 " 以下を追記
 set nocompatible
 " ファイルタイプ用のインデント設定を自動読み込みしないようになる。
-filetype plugin indent off
+" filetype plugin indent off
 
 if has('vim_starting')
   if &compatible
     set nocompatible
-  endif 
+  endif
 
   " Required:
   set runtimepath+=~/.vim/bundle/neobundle.vim
@@ -97,7 +100,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" 
+"
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neocomplcache.vim'
 
@@ -118,11 +121,11 @@ NeoBundle 'tpope/vim-surround'
 " Emmet-vim
 NeoBundle 'mattn/emmet-vim'
 " lang="ja" にする
-let g:user_emmet_settings = { 
-\ 'variables': { 
-\ 'lang' : 'ja' 
-\ } 
-\} 
+let g:user_emmet_settings = {
+\ 'variables': {
+\ 'lang' : 'ja'
+\ }
+\}
 
 " open-browser.vim
 NeoBundle 'tyru/open-browser.vim'
@@ -145,7 +148,7 @@ NeoBundle 'mrtazz/DoxygenToolkit.vim'
 
 " commentout.vim
 " コメントアウトプラグイン
-NeoBundle 'sakuraiyuta/commentout.vim' 
+NeoBundle 'sakuraiyuta/commentout.vim'
 
 " maketable.vim
 " マークダウン風テーブル作成プラグイン
@@ -177,7 +180,7 @@ NeoBundleCheck
 
 ""---------------------------------------------------------------------------
 "" jedi settings:
-"" 
+""
 "autocmd FileType python setlocal omnifunc=jedi#completions
 "
 "let g:jedi#auto_vim_configuration = 0
@@ -192,7 +195,7 @@ NeoBundleCheck
 "autocmd FileType python setlocal completeopt-=preview
 "---------------------------------------------------------------------------
 " syntastic settings:
-" 
+"
 " 使用するには、PATHを通しておく
 let g:syntastic_cpp_checkers = ["cppcheck"]
 " 使用するには、pip install しておく
@@ -205,7 +208,7 @@ noremap <C-X><C-D> :VimFiler -split -simple -winwidth=45 -no-quit<ENTER>
 
 "---------------------------------------------------------------------------
 " quickrun settings:
-" 
+"
 let g:quickrun_config = {
 \   "_" : {
 \       "runner" : "vimproc",
