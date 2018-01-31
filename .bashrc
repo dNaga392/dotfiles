@@ -43,3 +43,18 @@ else
         start_agent
     fi
 fi
+
+# かわいい顔文字を追加
+# SP1文字列はgit bash のものを参考
+function check-shell-command {
+  if [ $? -eq 0 ]; then
+    face="\e[32m✘╹◡╹✘"
+  else
+    face="\e[91m✘╹-╹✘"
+  fi
+  
+  echo -e "${face}\e[m"
+}
+
+PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$(check-shell-command) $ '
+
