@@ -164,6 +164,20 @@ NeoBundle 'Shougo/vimfiler.vim'
 
 NeoBundle "scrooloose/syntastic"
 
+NeoBundle 'rhysd/vim-clang-format'
+
+let g:clang_format#style_options = {
+            \ "BasedOnStyle" : "Google",
+            \ "ColumnLimit" : 128,
+            \ "AccessModifierOffset" : -4,
+            \ "AllowShortFunctionsOnASingleLine" : "Inline",
+            \ "IndentWidth" : 4,
+            \ "TabWidth" : 4,
+            \ "Standard" : "C++11",
+            \ "BreakBeforeBraces" : "Allman"}
+
+" NeoBundle 'w0rp/ale'
+
 "jedi ‚ğ“ü‚ê‚é‚Æpythonƒtƒ@ƒCƒ‹“Ç‚İ‚İ‚É—‚¿‚é‚Ì‚Åˆê’UØ‚é
 "NeoBundle 'davidhalter/jedi-vim'
 
