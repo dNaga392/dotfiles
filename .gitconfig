@@ -8,6 +8,9 @@
 	cm  = commit
 	cmm = commit -m # コメント付きコミット
 	cminit = commit --allow-empty -m \":seedling: first commit\" # 初回用コミットコマンド。打ち間違い防止のため長め
+	df = diff
+	dn = diff --name-only
+	ds = diff --name-status
 	co  = checkout
 	cob = checkout -b
 	lg  = log --graph --oneline --decorate
