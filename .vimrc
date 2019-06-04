@@ -168,7 +168,7 @@ NeoBundle 'rhysd/vim-clang-format'
 
 let g:clang_format#style_options = {
             \ "BasedOnStyle" : "Google",
-            \ "ColumnLimit" : 128,
+            \ "ColumnLimit" : 100,
             \ "AccessModifierOffset" : -4,
             \ "AllowShortFunctionsOnASingleLine" : "Inline",
             \ "IndentWidth" : 4,
