@@ -18,6 +18,8 @@
 	ls  = !ls --color=auto --show-control-chars
 	rl  = remote -v
 	st  = status
+	ps  = push
+	psf = push --force-with-lease
 [core]
 	ignorecase = false
 	autocrlf = input
