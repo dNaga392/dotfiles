@@ -124,7 +124,8 @@ NeoBundle 'mattn/emmet-vim'
 let g:user_emmet_settings = {
 \ 'variables': {
 \ 'lang' : 'ja'
-\ }
+\ },
+\ 'indentation': '  '
 \}
 
 " open-browser.vim
