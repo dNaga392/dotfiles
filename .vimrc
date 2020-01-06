@@ -175,7 +175,8 @@ let g:clang_format#style_options = {
             \ "IndentWidth" : 4,
             \ "TabWidth" : 4,
             \ "Standard" : "C++11",
-            \ "BreakBeforeBraces" : "Allman"}
+            \ "BreakBeforeBraces" : "Allman",
+            \ "IncludeBlocks" : "Preserve"}
 
 " NeoBundle 'w0rp/ale'
 
